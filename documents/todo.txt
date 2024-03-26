@@ -1,0 +1,16 @@
+
+Conception de la base de données
+
+Création du formulaire d'inscription
+
+Création du formulaire de connexion
+
+Création du formulaire de modification du profil
+
+Création du formulaire de suppression de compte
+
+Création de la page de profil
+
+Création du système d'authentification (inscription, connexion, déconnexion)
+
+Création du système de réservation (CRUD)
