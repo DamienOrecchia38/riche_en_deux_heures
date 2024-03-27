@@ -14,12 +14,12 @@
     <?php include __DIR__ . '/components/header.php'; ?>
 
     <div class="login">
-    <h1 class="element">Login</h1>
-        <form method="post">
-            <input type="text" name="u" placeholder="Nom d'utilisateur" required="required" class="element" />
-            <input type="password" name="p" placeholder="Mot de passe" required="required" class="element" />
-            <button type="submit" class="btn btn-primary btn-block btn-large">Se connecter</button>
-        </form>
+        <h1 class="element">Login</h1>
+            <form method="post">
+                <input type="text" name="u" placeholder="Nom d'utilisateur" required="required" class="element" />
+                <input type="password" name="p" placeholder="Mot de passe" required="required" class="element" />
+                <button type="submit" class="btn btn-primary btn-block btn-large">Se connecter</button>
+            </form>
     </div>
 
     <?php include __DIR__ . '/components/footer.php'; ?>

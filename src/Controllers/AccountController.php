@@ -8,6 +8,12 @@ class AccountController
 
     public function index()
     {
+        // $CoachRepository = new CoachRepository();
+        // $coach = $CoachRepository->findById();
+
+        // $CourseRepository = new CourseRepository();
+        // $course = $CourseRepository->findById();
+
         $title = "Mon compte";
 
         $viewData = [

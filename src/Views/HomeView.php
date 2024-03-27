@@ -4,34 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/css/style.css">
-    <link rel="stylesheet" href="../../public/css/home.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/home.css">
     <title>Accueil - Riche en deux heures</title>
 </head>
 
 <body>
     <?php include __DIR__ . '/components/header.php'; ?>
 
-    <h1>Liste des coach disponibles :</h1>
+    <h1>Liste des formations disponibles :</h1>
 
-    <?php
+    <div class="container">
+        <?php
+            foreach ($coach as $coachIndividual) {
+                foreach ($course as $courseItem) {
+                    echo ('<div class="card rgb">');
+                    echo ('<div class="card-image card3"></div>');
+                    echo ('<div class="card-text card3">');
+                    echo ('<span class="date">' . $courseItem->getDate() . '</span>');
+                    echo ('<h2>' . $courseItem->getTitle() . '</h2>');
+                    echo ('<p>Prix : ' . $courseItem->getPrice() . ' € ' . $coachIndividual->getFirstname() . ' ' . $coachIndividual->getLastname() . '</p>');
+                    echo ('</div>');
+                    echo ('</div>');
+                }
+            }
+        ?>
+    </div>
 
-    echo ('<ul>');
+    <script src="vanilla-tilt.min.js"></script>
 
-    foreach ($coach as $coach) {
-        echo ('<li>' . $coach->getFirstname() . ' ' . $coach->getLastname() . '</li>');
-    }
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"),{
+        glare: true,
+        reverse: true,
+        "max-glare": 0.15
+      });
+    </script>
 
-    echo ('</ul>');
-
-    foreach ($course as $course) {
-        echo ('<h1>' . $course->getTitle() . '</h1>');
-        echo ('<p> Date : ' . $course->getDate() . '</p>');
-        echo ('<p> Prix : ' . $course->getPrice() . '</p>');
-    }
-
-    ?>
-    
     <?php include __DIR__ . '/components/footer.php'; ?>
 </body>
 
